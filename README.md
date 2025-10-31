@@ -1,4 +1,4 @@
-# MERN Starter Template
+# MERN Starter Template--Vol 1.
 
 A professional boilerplate for MongoDB, Express, React + Vite (TypeScript), and Node.js. Beginner-friendly, production-ready, and branded for Kairo Collective. Real code, complete setup details, and creative, memorable energy.
 
