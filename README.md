@@ -72,7 +72,8 @@ npm run dev
 
 ## Backend Example Code
 
-server/server.js  
+## server/server.js 
+```tsx 
 const express = require('express');  
 const mongoose = require('mongoose');  
 const dotenv = require('dotenv');  
@@ -92,8 +93,10 @@ const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.DB_URI)  
   .then(() => app.listen(PORT, () => console.log(`Server running on ${PORT}`)))  
   .catch(err => console.error('DB Error:', err));  
+  ```
 
-server/models/userModel.js  
+## server/models/userModel.js  
+```tsx
 const mongoose = require('mongoose');  
 const userSchema = new mongoose.Schema({  
   name: { type: String, required: true },  
@@ -101,22 +104,27 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }  
 }, { timestamps: true });  
 module.exports = mongoose.model('User', userSchema);  
+```
 
-server/controllers/userController.js  
+## server/controllers/userController.js  
+```tsx
 const User = require('../models/userModel');  
 exports.getUsers = async (req, res) => {  
   const users = await User.find().select('-password');  
   res.json(users);  
 };  
-
-server/routes/userRoutes.js  
+```
+## server/routes/userRoutes.js 
+```tsx 
 const express = require('express');  
 const { getUsers } = require('../controllers/userController');  
 const router = express.Router();  
 router.get('/', getUsers);  
 module.exports = router;  
+```
 
-Stripe payment example:  
+## Stripe payment example: 
+```tsx 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);  
 app.post('/api/pay', async (req, res) => {  
   try {  
@@ -130,6 +138,7 @@ app.post('/api/pay', async (req, res) => {
     res.status(500).send({ error: err.message });  
   }  
 });  
+```
 
 ## Frontend Example Code
 
@@ -154,6 +163,7 @@ function App() {
 }
 
 export default App;
+```
 
 
 ## Linting, Formatting, Quality
