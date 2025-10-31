@@ -1,4 +1,4 @@
-![Kairo Collective Logo](public/assets/KairoLogo.png)
+![Kairo Collective Logo](/assets/KairoLogo.png)
 
 # MERN Starter Template
 
