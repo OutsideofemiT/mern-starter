@@ -133,26 +133,26 @@ app.post('/api/pay', async (req, res) => {
 
 ## Frontend Example Code
 
-client/src/App.tsx  
-import React, { useEffect, useState } from 'react';  
+**client/src/App.tsx**
+import React, { useEffect, useState } from 'react';
 
-function App() {  
-  const [message, setMessage] = useState('');  
-  useEffect(() => {  
-    fetch(import.meta.env.VITE_API_URL + '/hello')  
-      .then(res => res.json())  
-      .then(data => setMessage(data.message))  
-      .catch(() => setMessage('API error'));  
-  }, []);  
-  return (  
-    <div>  
-      <h1>MERN Starter</h1>  
-      <p>Backend says: {message}</p>  
-    </div>  
-  );  
-}  
+function App() {
+const [message, setMessage] = useState('');
+useEffect(() => {
+fetch(import.meta.env.VITE_API_URL + '/hello')
+.then(res => res.json())
+.then(data => setMessage(data.message))
+.catch(() => setMessage('API error'));
+}, []);
+return (
+<div>
+<h1>MERN Starter</h1>
+<p>Backend says: {message}</p>
+</div>
+);
+}
 
-export default App;  
+export default App;
 
 ## Linting, Formatting, Quality
 
