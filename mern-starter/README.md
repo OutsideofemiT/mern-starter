@@ -74,7 +74,7 @@ npm run dev
 
 ## Backend Example Code
 
-server/server.js  
+**server/server.js**  
 const express = require('express');  
 const mongoose = require('mongoose');  
 const dotenv = require('dotenv');  
@@ -95,7 +95,7 @@ mongoose.connect(process.env.DB_URI)
   .then(() => app.listen(PORT, () => console.log(`Server running on ${PORT}`)))  
   .catch(err => console.error('DB Error:', err));  
 
-server/models/userModel.js  
+**server/models/userModel.js**  
 const mongoose = require('mongoose');  
 const userSchema = new mongoose.Schema({  
   name: { type: String, required: true },  
@@ -104,21 +104,21 @@ const userSchema = new mongoose.Schema({
 }, { timestamps: true });  
 module.exports = mongoose.model('User', userSchema);  
 
-server/controllers/userController.js  
+**server/controllers/userController.js**  
 const User = require('../models/userModel');  
 exports.getUsers = async (req, res) => {  
   const users = await User.find().select('-password');  
   res.json(users);  
 };  
 
-server/routes/userRoutes.js  
+**server/routes/userRoutes.js**  
 const express = require('express');  
 const { getUsers } = require('../controllers/userController');  
 const router = express.Router();  
 router.get('/', getUsers);  
 module.exports = router;  
 
-Stripe payment example:  
+**Stripe payment example:**  
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);  
 app.post('/api/pay', async (req, res) => {  
   try {  
@@ -135,7 +135,7 @@ app.post('/api/pay', async (req, res) => {
 
 ## Frontend Example Code
 
-client/src/App.tsx  
+**client/src/App.tsx**  
 import React, { useEffect, useState } from 'react';  
 
 function App() {  
