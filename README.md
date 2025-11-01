@@ -42,39 +42,39 @@ mern-starter/
 
 ## Client Setup: All npm Installs
 
-# Project Initialization
+## Project Initialization
 npm init -y
 git init
 
-# React core
+## React core
 npm install react react-dom
 
-# TypeScript and type definitions
+## TypeScript and type definitions
 npm install --save-dev typescript @types/react @types/react-dom
 
-# Vite (bundler/build tool) and plugin
+## Vite (bundler/build tool) and plugin
 npm install --save-dev vite @vitejs/plugin-react
 
-# React Router (client-side routing)
+## React Router (client-side routing)
 npm install react-router-dom @types/react-router-dom
 
-# ESLint & Prettier (linting/formatting)
+## ESLint & Prettier (linting/formatting)
 npm install --save-dev eslint prettier eslint-plugin-react eslint-config-prettier eslint-plugin-prettier
 
-# Styled-components (CSS-in-JS)
+## Styled-components (CSS-in-JS)
 npm install styled-components @types/styled-components
 
-# Tailwind CSS (utility-first CSS) and setup
+## Tailwind CSS (utility-first CSS) and setup
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 
-# Redux (optional: state management)
+## Redux (optional: state management)
 npm install redux react-redux @types/react-redux
 
-# HTTP requests (optional: API calls)
+## HTTP requests (optional: API calls)
 npm install axios
 
-# Add to `.gitignore`:
+## Add to `.gitignore`:
 node_modules/
 dist/
 .env
