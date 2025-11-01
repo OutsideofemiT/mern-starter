@@ -38,10 +38,51 @@ mern-starter/
 ## Getting Started
 
 1. Prerequisites: Node.js v18+, npm, MongoDB (local or Atlas), Stripe account, Git.
-2. Clone template:
+2. text
+## Client Setup: All npm Installs
+
+Project Initialization
+npm init -y
+git init
+
+React core
+npm install react react-dom
+
+TypeScript and type definitions
+npm install --save-dev typescript @types/react @types/react-dom
+
+Vite (bundler/build tool) and plugin
+npm install --save-dev vite @vitejs/plugin-react
+
+React Router (client-side routing)
+npm install react-router-dom @types/react-router-dom
+
+ESLint & Prettier (linting/formatting)
+npm install --save-dev eslint prettier eslint-plugin-react eslint-config-prettier eslint-plugin-prettier
+
+Styled-components (CSS-in-JS)
+npm install styled-components @types/styled-components
+
+Tailwind CSS (utility-first CSS) and setup
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+Redux (optional: state management)
+npm install redux react-redux @types/react-redux
+
+HTTP requests (optional: API calls)
+npm install axios
+
+text
+
+Add to `.gitignore`:
+node_modules/
+dist/
+.env
+3. Clone template:
    git clone https://github.com/YourUsername/mern-starter.git
    cd mern-starter
-3. Install dependencies:
+4. Install dependencies:
    cd client && npm install
    cd ../server && npm install
 
